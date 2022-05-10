@@ -14,28 +14,24 @@ class RatingDataSource {
 
     const ratingData = [
       RatingModel(
-        // id: '1',
         title: 'Awesome', 
         description: "Best Interviewer Ever!",
         emoji: "👏🏻",
         color: Colors.blue,
       ),
       RatingModel(
-        // id: '2',
         title: "Good",
         description: "Nice person. Really Nice!",
         emoji: "👍🏻",
         color: Colors.green  
       ),
       RatingModel(
-        // id: '3',
         title: "Neutral",
         description: "Ummm... Okay. I guess!",
         emoji: "😐",
         color: Colors.grey
       ),
       RatingModel(
-        // id: '4',
         title: "Bad",
         description: "Needs to Improve! A LOT!",
         emoji: "☹",
@@ -46,68 +42,5 @@ class RatingDataSource {
     return await Future.value(ratingData);
     // return ratingData;
 
-    // List RatingData = [
-    //     {
-    //         "title":"Awesome",
-    //         "description":"Best Interviewer Ever!",
-    //         "emoji":"👏🏻",
-    //         "color": "Colors.blue"
-    //     },
-    //     {
-    //         "title":"Good",
-    //         "description":"Nice person. Really Nice!",
-    //         "emoji":"👍🏻",
-    //         "color": "Colors.green"
-    //     },
-    //     {
-    //         "title":"Neutral",
-    //         "description":"Ummm... Okay. I guess!",
-    //         "emoji":"😐",
-    //         "color": "Colors.grey"
-    //     },
-    //     {
-    //         "title":"Bad",
-    //         "description":"Needs to Improve! A LOT!",
-    //         "emoji":"☹",
-    //         "color": "Colors.red"
-    //     }
-    // ];
-
-    // if(RatingData.isNotEmpty) {
-    //   return RatingData.map((rating) => RatingModel.fromJson(rating)).toList();
-    // }
-    // else{
-    //   print('List is Empty');
-    //   return [];
-    // }
-  }
+   }
 }
-
-
-
-// const RatingData = [
-//   RatingModel(
-//     // id: '1',
-//     title: 'Awesome', 
-//     description: "Best Interviewer Ever!",
-//     emoji: "👏🏻",
-//   ),
-//   RatingModel(
-//     // id: '2',
-//     title: "Good",
-//     description: "Nice person. Really Nice!",
-//     emoji: "👍🏻",
-//   ),
-//   RatingModel(
-//     // id: '3',
-//     title: "Neutral",
-//     description: "Ummm... Okay. I guess!",
-//     emoji: "😐",
-//   ),
-//   RatingModel(
-//     // id: '4',
-//     title: "Bad",
-//     description: "Needs to Improve! A LOT!",
-//     emoji: "☹",
-//   ),
-// ];
