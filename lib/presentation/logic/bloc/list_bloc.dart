@@ -17,17 +17,23 @@ class ListBloc extends Bloc<ListEvent, ListState> {
     required this.getAllInterviewerUseCase,
     required this.getAllRatingsUseCase,
     }) : super(ListInitial()) {
-    on<GetAllInterviewerEvent>((event, emit) async {
+    on<ListEvent>((event, emit) async {
+      if(event is GetAllInterviewerEvent) {
+
       emit(LoadingListState());
-
       final interviewerList = await getAllInterviewerUseCase();
-
       emit(LoadedListState(interviewerList: interviewerList));
+      }
+      else if(event is GetAllRatingsEvent) {
+
+      final ratingList = await getAllRatingsUseCase.getIt();
+      emit(LoadedRatingsState(ratings: ratingList));
+      }
+
+
     });
 
-    on<GetAllRatingsEvent>((event, emit) async{
-      final ratingList = await getAllRatingsUseCase.calll();
-      emit(LoadedRatingsState(ratings: ratingList));
-    }); 
+    // on<GetAllRatingsEvent>((event, emit) async{
+    // }); 
   }
 }

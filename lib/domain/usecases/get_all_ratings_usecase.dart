@@ -9,7 +9,7 @@ class GetAllRatingsUseCase {
 
   GetAllRatingsUseCase({required this.ratingRepository});
 
-  Future<List<RatingEntity>> calll() async {
+  Future<List<RatingEntity>> getIt() async {
     return await ratingRepository.getAllRatings();
   }
 }
