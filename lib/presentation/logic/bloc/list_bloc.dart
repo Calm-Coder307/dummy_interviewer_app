@@ -26,7 +26,7 @@ class ListBloc extends Bloc<ListEvent, ListState> {
       }
       else if(event is GetAllRatingsEvent) {
 
-      final ratingList = await getAllRatingsUseCase.getIt();
+      final ratingList = await getAllRatingsUseCase.calll();
       emit(LoadedRatingsState(ratings: ratingList));
       }
 
